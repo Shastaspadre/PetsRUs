@@ -21,6 +21,7 @@
 		9E04D6612AD1F4D000D0C605 /* MockInfoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E04D6602AD1F4D000D0C605 /* MockInfoStore.swift */; };
 		9E04D6632AD2076200D0C605 /* PetsProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E04D6622AD2076200D0C605 /* PetsProviderProtocol.swift */; };
 		9E04D6652AD20A1400D0C605 /* PetsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E04D6642AD20A1400D0C605 /* PetsProvider.swift */; };
+		9E04D6672AD25A0A00D0C605 /* PetsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E04D6662AD25A0A00D0C605 /* PetsProviderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		9E04D6602AD1F4D000D0C605 /* MockInfoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInfoStore.swift; sourceTree = "<group>"; };
 		9E04D6622AD2076200D0C605 /* PetsProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsProviderProtocol.swift; sourceTree = "<group>"; };
 		9E04D6642AD20A1400D0C605 /* PetsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsProvider.swift; sourceTree = "<group>"; };
+		9E04D6662AD25A0A00D0C605 /* PetsProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				9E04D6592AD1E6B100D0C605 /* Mocks */,
 				9E04D65E2AD1ED5400D0C605 /* InfoStoreTests.swift */,
+				9E04D6662AD25A0A00D0C605 /* PetsProviderTests.swift */,
 			);
 			path = PetsRUsTests;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E04D6612AD1F4D000D0C605 /* MockInfoStore.swift in Sources */,
+				9E04D6672AD25A0A00D0C605 /* PetsProviderTests.swift in Sources */,
 				9E04D65F2AD1ED5400D0C605 /* InfoStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

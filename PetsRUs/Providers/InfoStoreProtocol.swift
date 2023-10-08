@@ -8,14 +8,6 @@
 import Foundation
 
 protocol InfoStoreProtocol {
-    typealias OnSetComplete = () -> Void
-    
-    var petsInfo: [PetsModel]? { get }
-    var petsInfoPublisher: Published<[PetsModel]?>.Publisher { get }
-    
-    var error: Error? { get }
-    var errorPublisher: Published<Error?>.Publisher { get }
-    
-    func getPetsInfo() async
-    func setPetsInfo(petsInfo: [PetsModel], onSetComplete: @escaping OnSetComplete) async
+    func getPetsInfo() async -> Result<[PetsModel], Error>
+    func setPetsInfo(petsInfo: [PetsModel]) async -> Result<Bool, Error>
 }

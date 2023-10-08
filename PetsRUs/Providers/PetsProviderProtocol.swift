@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PetsProviderProtocol {
-    typealias OnAddComplete = () -> Void
+    typealias OnAddComplete = (Bool) -> Void
     
     var petsInfo: [PetsModel]? { get }
     var petsInfoPublisher: Published<[PetsModel]?>.Publisher { get }
