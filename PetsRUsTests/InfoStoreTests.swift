@@ -14,7 +14,7 @@ class InfoStoreTests: XCTestCase {
     
     override func setUpWithError() throws {
         clearSubscriptions()
-        clearPetsInfo()
+        clearInfoStore()
     }
 
     private func clearSubscriptions() {
@@ -25,22 +25,21 @@ class InfoStoreTests: XCTestCase {
         subscriptions.removeAll()
     }
     
-    private func clearPetsInfo() {
+    private func clearInfoStore() {
         let sync = DispatchSemaphore(value: 0)
         
         Task {
-            await InfoStore.shared.setPetsInfo(petsInfo: [], onSetComplete: {
+            await InfoStore.shared.setPetsInfo(petsInfo: []) {
                 sync.signal()
-            })
+            }
         }
         
-        if sync.wait(timeout: .now() + DispatchTimeInterval.seconds(1)) == .timedOut {
-            XCTFail("clearPetsInfo timed out")
-        }
+        sync.wait()
     }
-    
+        
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        clearSubscriptions()
+        clearInfoStore()
     }
 
     func testGettingPetsFromEmptyStore() {
